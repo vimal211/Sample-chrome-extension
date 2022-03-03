@@ -1,0 +1,24 @@
+{
+    "name": "My First Extension",
+    "description": "This is my first cool extension!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background":{
+        "service_worker":"background.js"
+    },
+    "content_scripts":[{
+        "matches":["https://*.youtube.com/*"],
+        "exclude_matches":["https://*.youtube.com/watch/*"],
+        "js":["content.js"]
+    }],
+    "permissions": ["bookmarks"],
+    "icons":{
+        "16":"./CJ-logos_black.png",
+        "48":"./CJ-logos_black.png",
+        "128":"./CJ-logos_black.png"
+    },
+    "action":{
+        "default_title":"Created by Vimal",
+        "default_popup":"popup.html"
+    }
+}
